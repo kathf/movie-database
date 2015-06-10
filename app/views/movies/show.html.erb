@@ -1,18 +1,24 @@
-<%- model_class = Movie -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+<div class="row">
+  <div class="col-sm-7">
+    <div class="page-header">
+      <h1><%= @movie.title %></h1>
+    </div>
+    <dl class="dl-horizontal">
+      <dt><strong> Year :</strong></dt>
+      <dd><%= @movie.year %></dd>
+      <dt><strong> Length:</strong></dt>
+      <dd><%= @movie.length %> min</dd>
+      <dt>
+        <strong> Genres:</strong> </br>
+        <%= link_to "(show)", movie_genres_path(@movie), id: 'show_hide_genre' %>
+      </dt>
+      <dd id="output"> </dd>
+    </dl>
+  </div>
+  <div class="col-sm-5">
+    <%= image_tag @movie.poster, class: "height-400 center-block" %>
+  </div>
 </div>
-
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @movie.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:year) %>:</strong></dt>
-  <dd><%= @movie.year %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:length) %>:</strong></dt>
-  <dd><%= @movie.length %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:poster) %>:</strong></dt>
-  <dd><%= @movie.poster %></dd>
-</dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               movies_path, :class => 'btn btn-default'  %>

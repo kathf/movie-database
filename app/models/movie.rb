@@ -5,4 +5,6 @@ class Movie < ActiveRecord::Base
 
   has_many :castings
   has_many :cast_members, through: :castings
+
+  validates :title, presence: true
 end

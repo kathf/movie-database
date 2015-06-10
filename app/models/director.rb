@@ -1,3 +1,3 @@
 class Director < ActiveRecord::Base
-  belongs_to :movies
+  belongs_to :movie
 end

@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150601233426) do
   end
 
   create_table "genres", force: :cascade do |t|
-    t.string   "genre"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

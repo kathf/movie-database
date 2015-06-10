@@ -15,3 +15,30 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+function genre_show (url) {
+  $.get(url, function(data) {
+    $('#output').html(data);
+    $('#show_hide_genre').html("(hide)");
+  });
+}
+
+function genre_hide (url) {
+  $.get(url, function(data) {
+    $('#output').html("");
+    $('#show_hide_genre').html("(show)");
+  });
+}
+
+$(document).ready(function() {
+  $('#show_hide_genre').click(function(e) {
+    var url = $(this).attr('href');
+    if ( $('#show_hide_genre').html() == "(show)" ) {
+      genre_show(url);
+    } else {
+      genre_hide(url);
+    }
+    e.preventDefault();
+  });
+
+});

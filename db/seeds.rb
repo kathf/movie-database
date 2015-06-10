@@ -11,7 +11,7 @@ movies_array.each do |movie_title|
   movie1.build_director(name: i.director[0])
 
   i.genres.each do |gen|
-    movie1.genres.create!(genre: gen)
+    movie1.genres.create!(name: gen)
   end
 
   i.cast_members.each do |member|

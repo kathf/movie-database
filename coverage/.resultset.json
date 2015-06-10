@@ -1,0 +1,79 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Kath/Documents/Coder-Factory/3.Rails/9.1/cfmdb/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Kath/Documents/Coder-Factory/3.Rails/9.1/cfmdb/app/helpers/movies_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Kath/Documents/Coder-Factory/3.Rails/9.1/cfmdb/app/controllers/movies_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Kath/Documents/Coder-Factory/3.Rails/9.1/cfmdb/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Kath/Documents/Coder-Factory/3.Rails/9.1/cfmdb/app/models/movie.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1433903830
+  }
+}
