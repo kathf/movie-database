@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 20150601233426) do
 
   create_table "directors", force: :cascade do |t|
     t.integer  "movie_id"
-    t.string   "name",       default: [],              array: true
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|

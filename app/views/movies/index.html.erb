@@ -4,15 +4,23 @@
 
 <div class = "container">
   <div class = "row">
-    <div class="media">
+    <div class="movie-display">
       <% @movies.each do |movie| %>
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 text-center">
           <%= link_to movie_path(movie) do  %>
             <%= image_tag movie.poster, class: "thumbnail height-100 center-block" %>
-            <%= movie.title%>
+            <%= movie.title %>
           <% end %>
         </div>
       <% end %>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="pull-right">
+      <%= next_page_link %>
+    </div>
+    <div class="pull-left">
+      <%= previous_page_link %>
     </div>
   </div>
 </div>

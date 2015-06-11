@@ -7,8 +7,7 @@ movies_array.each do |movie_title|
 
   movie1 = Movie.create!(title: i.title, year: i.year, length: i.length, poster: i.poster)
 
-
-  movie1.build_director(name: i.director[0])
+  movie1.build_director(name: i.director)
 
   i.genres.each do |gen|
     movie1.genres.create!(name: gen)
@@ -18,6 +17,6 @@ movies_array.each do |movie_title|
     movie1.cast_members.create!(name: member)
   end
 
-  # movie1.save
+  movie1.save
 
 end

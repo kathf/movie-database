@@ -2,7 +2,8 @@ class MoviesController < ApplicationController
   before_action :find_movie, only: [:show, :destroy, :edit, :update]
 
   def index
-    @movies = Movie.all
+    @page = (params[:page] || 1).to_i
+    @movies = Movie.limit(12).offset((@page - 1) * 12)
   end
 
   def new

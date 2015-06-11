@@ -8,11 +8,16 @@
       <dd><%= @movie.year %></dd>
       <dt><strong> Length:</strong></dt>
       <dd><%= @movie.length %> min</dd>
-      <dt>
-        <strong> Genres:</strong> </br>
+      <dt><strong> Genre(s):</strong> </br> </dt>
         <%= link_to "(show)", movie_genres_path(@movie), id: 'show_hide_genre' %>
-      </dt>
-      <dd id="output"> </dd>
+      <dt></dt>
+      <dd id="genre_output"> </dd>
+
+      <dt><strong> Director(s):</strong> </br> </dt>
+        <%= link_to "   (show)", movie_directors_path(@movie), id: 'show_hide_director' %>
+      <dt></dt>
+      <dd id="director_output"> </dd>
+
     </dl>
   </div>
   <div class="col-sm-5">
