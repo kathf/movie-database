@@ -4,4 +4,9 @@ class GenresController < ApplicationController
     @genres = @movie.genres
     render layout: false
   end
+
+  def show
+    @genres = Genre.all
+  end
+
 end

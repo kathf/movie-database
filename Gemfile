@@ -19,6 +19,8 @@ gem 'simple_form', '~> 3.1.0'
 #   gem 'rails-assets-bootstrap'
 # end
 
+gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'draper', '~> 2.1.0'
 
 
 # Use SCSS for stylesheets

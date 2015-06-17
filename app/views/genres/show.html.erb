@@ -1,0 +1,10 @@
+<h1> Browse by Genre </h1>
+
+<ul>
+  <%= @genres.each do |genre| %>
+    <li><%= genre.name %></li>
+    <% genre.movies.each do |genre| %>
+      <%= movie.name %></br>
+    <% end %>
+  <% end %>
+</ul>

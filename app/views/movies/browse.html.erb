@@ -1,0 +1,8 @@
+@browse_by
+
+
+<h1> <%= @genre %> </h1>
+
+<% @movie.genres.each do |genre| %>
+  <%= genre.name %></br>
+<% end %>
