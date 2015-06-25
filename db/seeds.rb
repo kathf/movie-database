@@ -7,16 +7,21 @@ movies_array.each do |movie_title|
 
   movie1 = Movie.create!(title: i.title, year: i.year, length: i.length, poster: i.poster)
 
-  movie1.build_director(name: i.director)
-
   i.genres.each do |gen|
-    movie1.genres.create!(name: gen)
+    gen1 = Genre.find_or_create_by(name: gen)
+    movie1.genres << gen1
   end
 
-  i.cast_members.each do |member|
-    movie1.cast_members.create!(name: member)
+  i.cast_members.each do |cast|
+    cast1 = CastMember.find_or_create_by(name: cast)
+    movie1.cast_members << cast1
   end
 
-  movie1.save
+  i.director.each do |dir|
+    dir1 = Director.find_or_create_by(name: dir)
+    movie1.directors << dir1
+  end
+
+  movie1.save!
 
 end

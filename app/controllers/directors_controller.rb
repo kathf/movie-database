@@ -1,7 +1,10 @@
 class DirectorsController < ApplicationController
   def index
-    @movie = Movie.find(params[:movie_id])
-    @director = @movie.director
-    render json: @director
+    @directors = Director.all.order(:name)
+  end
+
+  def show
+    @director = Director.find(params[:id])
+    @movies = @director.movies.order(:title).page(params[:page]).per(12)
   end
 end

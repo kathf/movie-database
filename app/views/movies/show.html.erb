@@ -9,15 +9,17 @@
       <dt><strong> Length:</strong></dt>
       <dd><%= @movie.length %> min</dd>
       <dt><strong> Genre(s):</strong> </br> </dt>
-        <%= link_to "(show)", movie_genres_path(@movie), id: 'show_hide_genre' %>
+      <dd><%= link_to "(show)", show_genre_movie_path(@movie), id: 'show_hide_genre', remote: true %></dd>
       <dt></dt>
       <dd id="genre_output"> </dd>
-
       <dt><strong> Director(s):</strong> </br> </dt>
-        <%= link_to "   (show)", movie_directors_path(@movie), id: 'show_hide_director' %>
+      <dd><%= link_to "(show)", show_director_movie_path(@movie), id: 'show_hide_director', remote: true %></dd>
       <dt></dt>
       <dd id="director_output"> </dd>
-
+      <dt><strong> Cast Members(s):</strong> </br> </dt>
+      <dd><%= link_to "(show)", show_cast_member_movie_path(@movie), id: 'show_hide_cast_member', remote: true %></dd>
+      <dt></dt>
+      <dd id="cast_member_output"> </dd>
     </dl>
   </div>
   <div class="col-sm-5">

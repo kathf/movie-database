@@ -5,14 +5,9 @@
 <div class = "container">
   <div class = "row">
     <div class="movie-display-container">
-      <% @movies.each do |movie| %>
-        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 movie-box">
-          <%= link_to movie_path(movie) do  %>
-            <%= image_tag movie.poster, class: "thumbnail height-100 center-block" %>
-            <span class="display-title center-block"> <%= movie.title %> </span>
-          <% end %>
-        </div>
-      <% end %>
+
+      <%= render @movies %>
+
     </div>
   </div>
   <div class = "row">

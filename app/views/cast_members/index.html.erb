@@ -1,0 +1,9 @@
+<h1> Browse by Cast Member </h1>
+
+<ul class="list-group">
+  <% @cast_members.each do |cast_member| %>
+    <%= link_to cast_member_path(cast_member) do %>
+      <li class="list-group-item"><%= cast_member.name %></br>
+    <% end %>
+  <% end %>
+</ul>

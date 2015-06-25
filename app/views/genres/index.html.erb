@@ -1,3 +1,9 @@
-<% @movie.genres.each do |genre| %>
-  <%= genre.name %></br>
-<% end %>
+<h1> Browse by Genre </h1>
+
+<ul class="list-group">
+  <% @genres.each do |genre| %>
+    <%= link_to genre_path(genre) do %>
+      <li class="list-group-item"><%= genre.name %></br>
+    <% end %>
+  <% end %>
+</ul>

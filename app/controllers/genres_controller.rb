@@ -1,12 +1,11 @@
 class GenresController < ApplicationController
   def index
-    @movie = Movie.find(params[:movie_id])
-    @genres = @movie.genres
-    render layout: false
+    @genres = Genre.all.order(:name)
   end
 
   def show
-    @genres = Genre.all
+    @genre = Genre.find(params[:id])
+    @movies = @genre.movies.order(:title).page(params[:page]).per(12)
   end
 
 end

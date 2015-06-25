@@ -1,0 +1,9 @@
+<h1> Browse by Director </h1>
+
+<ul class="list-group">
+  <% @directors.each do |director| %>
+    <%= link_to director_path(director) do %>
+      <li class="list-group-item"><%= director.name %></br>
+    <% end %>
+  <% end %>
+</ul>
