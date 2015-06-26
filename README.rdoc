@@ -1,10 +1,11 @@
-CODER FACTORY MOVIE DATABASE
+MOVIE DATABASE
 
-Build your own simple version if The Internet Movie Database.
+https://stark-bayou-2679.herokuapp.com/
 
-Your app should allow the following:
-Allow a Visitor to view a list of movies
-Allow a Visitor to view the details of a movie including genre and cast
-Allow a Visitor to click on cast member and see a list of movies that cast members has starred in/directed/produced
-Allow a Visitor to click a Genre and view other movies in the Genre
-To make developing your application easier you should seed your database with movies that have some common cast members and genres.
+Simple version if the Internet Movie Database (IMDB) using the IMDB gem.
+
+User stories:
+- Allow a Visitor to view a list of movies
+- Allow a Visitor to view the details of a movie including genre and cast
+- Allow a Visitor to click on cast member and see a list of movies that cast members has starred in/directed/produced
+- Allow a Visitor to click a Genre and view other movies in the Genre
