@@ -5,9 +5,16 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href=root>CFMDB</a>
+    <a class="navbar-brand" href="/">Movie Database</a>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav pull-right">
+        <li>
+          <%= simple_form_for 'search', url: {controller: "search", action: "search"}, html: {class: "navbar-form"} do |f|  %>
+            <%= f.input 'query', label: false %>
+            <%= f.button :submit, value: "Search", class: "btn-search btn-sm" %>
+          <% end %>
+        </li>
+
         <li class="dropdown">
           <%= link_to 'Browse by <b class="caret"></b>'.html_safe, request.path, :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
           <ul class="dropdown-menu" role="menu">

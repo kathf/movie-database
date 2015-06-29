@@ -1,6 +1,6 @@
 class CastMembersController < ApplicationController
   def index
-    @cast_members = CastMember.all.order(:name)
+    @cast_members = CastMember.all.order(:name).page(params[:page]).per(14)
   end
 
   def show

@@ -1,6 +1,6 @@
 class GenresController < ApplicationController
   def index
-    @genres = Genre.all.order(:name)
+    @genres = Genre.all.order(:name).order(:name).page(params[:page]).per(14)
   end
 
   def show

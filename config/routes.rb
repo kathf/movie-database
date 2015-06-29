@@ -7,11 +7,15 @@ Rails.application.routes.draw do
     get 'show_director', on: :member
     get 'show_cast_member', on: :member
 
-    resources :directors, only: [:index]
-    resources :cast_members, only: [:index]
+    resources :directors, only: :index
+    resources :cast_members, only: :index
   end
 
-  resources :genres
-  resources :cast_members
-  resources :directors
+  resources :genres, only: [:index, :show]
+  resources :cast_members, only: [:index, :show]
+  resources :directors, only: [:index, :show]
+
+  get 'search' => 'search#search'
+  post 'search' => 'search#search'
+
 end
